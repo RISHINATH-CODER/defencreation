@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurakshithNet - Defencreation Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>DEFENCREATION</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+            <li><a href="users.html" class="nav-item"><i class="fas fa-users"></i><span>Users</span></a></li>
+            <li><a href="surakshithnet.html" class="nav-item active"><i
+                        class="fas fa-shield-alt"></i><span>SurakshithNet</span></a></li>
+            <li><a href="yuvamitra.html" class="nav-item"><i class="fas fa-book-reader"></i><span>YuvaMitra</span></a>
+            </li>
+            <li><a href="analytics.html" class="nav-item"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+            </li>
+            <li><a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+        <div class="user-profile">
+            <div class="avatar">A</div>
+            <div class="user-info">
+                <h4>Admin User</h4><span>Super Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="page-title">
+                <button id="sidebarToggle" class="icon-btn mobile-only"><i class="fas fa-bars"></i></button>
+                <h1>SurakshithNet Overview</h1>
+            </div>
+            <div class="top-actions">
+                <button class="btn-neon"><i class="fas fa-sync"></i> Update Database</button>
+            </div>
+        </header>
+
+        <!-- App Stats -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Sites Blocked</span>
+                    <div class="stat-icon"><i class="fas fa-ban"></i></div>
+                </div>
+                <div class="stat-value">8,932</div>
+                <div class="stat-trend trend-up"><i class="fas fa-arrow-up"></i><span>+150 today</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Safe Search Queries</span>
+                    <div class="stat-icon"><i class="fas fa-search"></i></div>
+                </div>
+                <div class="stat-value">45,200</div>
+                <div class="stat-trend trend-up"><i class="fas fa-check"></i><span>Clean</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Active Filters</span>
+                    <div class="stat-icon"><i class="fas fa-filter"></i></div>
+                </div>
+                <div class="stat-value">24</div>
+                <div class="stat-trend trend-up"><span>All Active</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Flagged Content</span>
+                    <div class="stat-icon"><i class="fas fa-flag"></i></div>
+                </div>
+                <div class="stat-value">112</div>
+                <div class="stat-trend trend-down"><span>-5%</span></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h3>Recent Threat Blocks</h3>
+                <button class="btn-neon">View Full Log</button>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Threat Type</th>
+                            <th>Source IP</th>
+                            <th>Action Taken</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:42 AM</td>
+                            <td>Phishing Site</td>
+                            <td>192.168.1.X</td>
+                            <td>Blocked Access</td>
+                            <td><span class="status-badge status-active">Secured</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:35 AM</td>
+                            <td>Adult Content</td>
+                            <td>10.0.0.X</td>
+                            <td>Redirected</td>
+                            <td><span class="status-badge status-active">Filtered</span></td>
+                        </tr>
+                        <tr>
+                            <td>09:15 AM</td>
+                            <td>Malware Download</td>
+                            <td>172.16.0.X</td>
+                            <td>Connection Reset</td>
+                            <td><span class="status-badge status-danger">Critical</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Defencreation Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Simple CSS Bar Chart for Analytics */
+        .chart-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 300px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .bar {
+            width: 40px;
+            background: linear-gradient(to top, var(--primary), var(--secondary));
+            border-radius: 4px 4px 0 0;
+            transition: height 1s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .bar:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .bar span {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .bar::after {
+            content: attr(data-value);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .bar:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>DEFENCREATION</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+            <li><a href="users.html" class="nav-item"><i class="fas fa-users"></i><span>Users</span></a></li>
+            <li><a href="surakshithnet.html" class="nav-item"><i
+                        class="fas fa-shield-alt"></i><span>SurakshithNet</span></a></li>
+            <li><a href="yuvamitra.html" class="nav-item"><i class="fas fa-book-reader"></i><span>YuvaMitra</span></a>
+            </li>
+            <li><a href="analytics.html" class="nav-item active"><i
+                        class="fas fa-chart-bar"></i><span>Analytics</span></a></li>
+            <li><a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+        <div class="user-profile">
+            <div class="avatar">A</div>
+            <div class="user-info">
+                <h4>Admin User</h4><span>Super Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="page-title">
+                <button id="sidebarToggle" class="icon-btn mobile-only"><i class="fas fa-bars"></i></button>
+                <h1>System Analytics</h1>
+            </div>
+            <div class="top-actions">
+                <button class="btn-neon">Export Report</button>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h3>Traffic Overview (Last 7 Days)</h3>
+                <div class="search-bar" style="width: auto;">
+                    <select
+                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px; border-radius: 4px; outline: none;">
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>This Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="bar" style="height: 40%;" data-value="40%"><span>Mon</span></div>
+                <div class="bar" style="height: 65%;" data-value="65%"><span>Tue</span></div>
+                <div class="bar" style="height: 55%;" data-value="55%"><span>Wed</span></div>
+                <div class="bar" style="height: 80%;" data-value="80%"><span>Thu</span></div>
+                <div class="bar" style="height: 70%;" data-value="70%"><span>Fri</span></div>
+                <div class="bar" style="height: 90%;" data-value="90%"><span>Sat</span></div>
+                <div class="bar" style="height: 60%;" data-value="60%"><span>Sun</span></div>
+            </div>
+        </section>
+
+        <section class="stats-grid" style="margin-top: 2rem;">
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Avg. Session</span>
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                </div>
+                <div class="stat-value">12m</div>
+                <div class="stat-trend trend-up"><span>+2m vs last week</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Bounce Rate</span>
+                    <div class="stat-icon"><i class="fas fa-door-open"></i></div>
+                </div>
+                <div class="stat-value">25%</div>
+                <div class="stat-trend trend-up"><span style="color: var(--success);">-2% (Good)</span></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Traffic Sources</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Users</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Direct</td>
+                            <td>5,200</td>
+                            <td><span class="trend-up">↑ 10%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Organic Search</td>
+                            <td>3,100</td>
+                            <td><span class="trend-up">↑ 5%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Social Media (Instagram)</td>
+                            <td>2,500</td>
+                            <td><span class="trend-up">↑ 25%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Referrals</td>
+                            <td>800</td>
+                            <td><span class="trend-down">↓ 3%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

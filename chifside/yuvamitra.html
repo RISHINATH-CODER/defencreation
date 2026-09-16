@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuvaMitra - Defencreation Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>DEFENCREATION</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+            <li><a href="users.html" class="nav-item"><i class="fas fa-users"></i><span>Users</span></a></li>
+            <li><a href="surakshithnet.html" class="nav-item"><i
+                        class="fas fa-shield-alt"></i><span>SurakshithNet</span></a></li>
+            <li><a href="yuvamitra.html" class="nav-item active"><i
+                        class="fas fa-book-reader"></i><span>YuvaMitra</span></a></li>
+            <li><a href="analytics.html" class="nav-item"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+            </li>
+            <li><a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+        <div class="user-profile">
+            <div class="avatar">A</div>
+            <div class="user-info">
+                <h4>Admin User</h4><span>Super Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="page-title">
+                <button id="sidebarToggle" class="icon-btn mobile-only"><i class="fas fa-bars"></i></button>
+                <h1>YuvaMitra Resources</h1>
+            </div>
+            <div class="top-actions">
+                <button class="btn-neon"><i class="fas fa-upload"></i> Upload Resource</button>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">E-Books</span>
+                    <div class="stat-icon"><i class="fas fa-book"></i></div>
+                </div>
+                <div class="stat-value">340</div>
+                <div class="stat-trend trend-up"><span>Available</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Video Tutorials</span>
+                    <div class="stat-icon"><i class="fas fa-video"></i></div>
+                </div>
+                <div class="stat-value">125</div>
+                <div class="stat-trend trend-up"><span>HD Quality</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Total Downloads</span>
+                    <div class="stat-icon"><i class="fas fa-download"></i></div>
+                </div>
+                <div class="stat-value">15,600</div>
+                <div class="stat-trend trend-up"><i class="fas fa-arrow-up"></i><span>+500 this week</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header"><span class="stat-title">Active Readers</span>
+                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                </div>
+                <div class="stat-value">2,800</div>
+                <div class="stat-trend trend-up"><i class="fas fa-bolt"></i><span>Learning Now</span></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h3>Top Content</h3>
+                <button class="btn-neon">Library Manager</button>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Downloads</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cyber Safety 101</td>
+                            <td>E-Book (PDF)</td>
+                            <td>Education</td>
+                            <td>5,400</td>
+                            <td><span class="status-badge status-active">4.9 ★</span></td>
+                        </tr>
+                        <tr>
+                            <td>Python for Beginners</td>
+                            <td>Video Series</td>
+                            <td>Coding</td>
+                            <td>3,200</td>
+                            <td><span class="status-badge status-active">4.8 ★</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mental Health Guide</td>
+                            <td>E-Book (EPUB)</td>
+                            <td>Wellness</td>
+                            <td>2,100</td>
+                            <td><span class="status-badge status-active">4.9 ★</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ethical Hacking Intro</td>
+                            <td>Video</td>
+                            <td>Security</td>
+                            <td>1,800</td>
+                            <td><span class="status-badge status-active">4.7 ★</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

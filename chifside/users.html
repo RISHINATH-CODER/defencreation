@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - Defencreation Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <!-- <img src="../logo.png" alt="Logo" style="width: 40px; height: auto;"> -->
+            <h2>DEFENCREATION</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+            <li><a href="users.html" class="nav-item active"><i class="fas fa-users"></i><span>Users</span></a></li>
+            <li><a href="surakshithnet.html" class="nav-item"><i
+                        class="fas fa-shield-alt"></i><span>SurakshithNet</span></a></li>
+            <li><a href="yuvamitra.html" class="nav-item"><i class="fas fa-book-reader"></i><span>YuvaMitra</span></a>
+            </li>
+            <li><a href="analytics.html" class="nav-item"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+            </li>
+            <li><a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+        <div class="user-profile">
+            <div class="avatar">A</div>
+            <div class="user-info">
+                <h4>Admin User</h4><span>Super Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="page-title">
+                <button id="sidebarToggle" class="icon-btn mobile-only"><i class="fas fa-bars"></i></button>
+                <h1>User Management</h1>
+            </div>
+            <div class="top-actions">
+                <div class="search-bar"><i class="fas fa-search search-icon"></i><input type="text"
+                        placeholder="Search users..."></div>
+                <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-neon">All Users</button>
+                    <button class="btn-neon" style="opacity: 0.7;">Active</button>
+                    <button class="btn-neon" style="opacity: 0.7;">Banned</button>
+                </div>
+                <button class="btn-neon"><i class="fas fa-plus"></i> Add User</button>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Joined</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rahul Sharma</td>
+                            <td>rahul.s@example.com</td>
+                            <td>Parent</td>
+                            <td>Jan 12, 2024</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="icon-btn" style="width: 32px; height: 32px;"><i class="fas fa-ellipsis-v"
+                                        style="font-size: 0.9rem;"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Amit Singh</td>
+                            <td>amit.singh@test.com</td>
+                            <td>Admin</td>
+                            <td>Dec 20, 2023</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="icon-btn" style="width: 32px; height: 32px;"><i class="fas fa-ellipsis-v"
+                                        style="font-size: 0.9rem;"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Sneha Gupta</td>
+                            <td>sneha.g@example.com</td>
+                            <td>Student</td>
+                            <td>Jan 14, 2024</td>
+                            <td><span class="status-badge status-warning">Pending</span></td>
+                            <td><button class="icon-btn" style="width: 32px; height: 32px;"><i class="fas fa-ellipsis-v"
+                                        style="font-size: 0.9rem;"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Bot Account</td>
+                            <td>bot@spam.com</td>
+                            <td>User</td>
+                            <td>Jan 10, 2024</td>
+                            <td><span class="status-badge status-danger">Banned</span></td>
+                            <td><button class="icon-btn" style="width: 32px; height: 32px;"><i class="fas fa-ellipsis-v"
+                                        style="font-size: 0.9rem;"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
